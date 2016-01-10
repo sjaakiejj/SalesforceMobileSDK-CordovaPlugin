@@ -2,3 +2,10 @@
 android {
     useLibrary 'org.apache.http.legacy'
 }
+
+dependencies {
+    compile 'com.google.guava:guava:18.0'
+    compile 'org.apache.httpcomponents:httpmime:4.3.2'
+    compile 'org.apache.james:apache-mime4j:0.7.2'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+}
