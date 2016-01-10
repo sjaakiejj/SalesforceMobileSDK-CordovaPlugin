@@ -1,0 +1,13 @@
+
+
+android {
+    useLibrary 'org.apache.http.legacy'
+}
+
+dependencies {
+    debugCompile project(path: ":CordovaLib", configuration: "debug")
+    releaseCompile project(path: ":CordovaLib", configuration: "release")
+    debugCompile project(path: ":SmartSync", configuration: "debug")
+    releaseCompile project(path: ":SmartSync", configuration: "release")
+}
+
