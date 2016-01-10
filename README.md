@@ -3,6 +3,7 @@ Steps to use the Cordova plugin for the Salesforce Mobile SDK
 
 <pre>
 npm install cordova -g
+npm install shelljs
 
 cordova create TestApp
 cd TestApp
