@@ -7,9 +7,8 @@ npm install cordova -g
 cordova create TestApp
 cd TestApp
 cordova plugin add https://github.com/elviejokike/SalesforceMobileSDK-CordovaPlugin
-cordova platform add android
-cordova platform add ios
-cordova prepare
+cordova platform add android@5.0.0
+cordova build android
 </pre>
 
 For more information, check out [Salesforce Mobile SDK Development Guide](https://github.com/forcedotcom/SalesforceMobileSDK-Shared/blob/master/doc/mobile_sdk.pdf?raw=true)
