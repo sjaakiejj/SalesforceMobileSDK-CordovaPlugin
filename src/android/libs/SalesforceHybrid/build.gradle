@@ -1,11 +1,6 @@
 
 apply plugin: 'android-library'
 
-dependencies {
-  compile project(':libs:SmartSync')
-  compile project(':external:cordova:framework')
-}
-
 android {
   compileSdkVersion 23
   buildToolsVersion '23.0.1'
