@@ -1,0 +1,8 @@
+dependencies {
+    debugCompile project(path: ":SmartStore", configuration: "debug")
+    releaseCompile project(path: ":SmartStore", configuration: "release")
+}
+
+android {
+    useLibrary 'org.apache.http.legacy'
+}
