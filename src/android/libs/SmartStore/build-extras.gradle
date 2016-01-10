@@ -1,0 +1,8 @@
+dependencies {
+    debugCompile project(path: ":SalesforceSDK", configuration: "debug")
+    releaseCompile project(path: ":SalesforceSDK", configuration: "release")
+}
+
+android {
+    useLibrary 'org.apache.http.legacy'
+}
