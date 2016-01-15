@@ -7,7 +7,7 @@ npm install shelljs
 
 cordova create TestApp
 cd TestApp
-cordova plugin add https://github.com/elviejokike/SalesforceMobileSDK-CordovaPlugin
+cordova plugin add https://github.com/sjaakiejj/SalesforceMobileSDK-CordovaPlugin
 cordova platform add android@5.0.0
 cordova build android
 </pre>
