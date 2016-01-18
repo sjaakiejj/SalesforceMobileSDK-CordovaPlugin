@@ -100,7 +100,9 @@ shelljs.cp('-R', path.join(pluginRoot, 'gradle'), appProjectRoot);
 
 fs.readFile(path.join(appProjectRoot, 'build.gradle'), 'utf8', function (err, data) {
     console.log('Fixing application build.gradle');
-    console.log(data);
+    //console.log(data);
+    console.log(data.indexOf("org.apache.http.legacy"));
+    console.log(data.search("org.apache.http.legacy"));
     if(data.indexOf("org.apache.http.legacy") < 0 && data.indexOf("allprojects") < 0)
     {
         var oldAndroidDepTree = "android {";
