@@ -101,7 +101,7 @@ shelljs.cp('-R', path.join(pluginRoot, 'gradle'), appProjectRoot);
 fs.readFile(path.join(appProjectRoot, 'build.gradle'), 'utf8', function (err, data) {
     console.log('Fixing application build.gradle');
     console.log(data);
-    if(data.indexOf("org.apache.http.legacy") <= 0)
+    if(data.indexOf("org.apache.http.legacy") < 0 && data.indexOf("allprojects") < 0)
     {
         var oldAndroidDepTree = "android {";
         var newAndroidDepTree = "android {\n\tpackagingOptions {\n\t\texclude 'META-INF/LICENSE'\n\t\texclude 'META-INF/LICENSE.txt'\n\t\texclude 'META-INF/DEPENDENCIES'\n\t\texclude 'META-INF/NOTICE'\n\t}";
