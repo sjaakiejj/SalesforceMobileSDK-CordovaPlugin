@@ -103,8 +103,10 @@ fs.readFile(path.join(appProjectRoot, 'build.gradle'), 'utf8', function (err, da
     //console.log(data);
     console.log(data.indexOf("org.apache.http.legacy"));
     console.log(data.search("org.apache.http.legacy"));
+    console.log(data.indexOf("org.apache.http.legacy") < 0 && data.indexOf("allprojects") < 0);
     if(data.indexOf("org.apache.http.legacy") < 0 && data.indexOf("allprojects") < 0)
-    {
+    {   
+        console.log("Fixing android tree");
         var oldAndroidDepTree = "android {";
         var newAndroidDepTree = "android {\n\tpackagingOptions {\n\t\texclude 'META-INF/LICENSE'\n\t\texclude 'META-INF/LICENSE.txt'\n\t\texclude 'META-INF/DEPENDENCIES'\n\t\texclude 'META-INF/NOTICE'\n\t}";
         shelljs.sed('-i', oldAndroidDepTree, newAndroidDepTree, path.join(appProjectRoot, 'build.gradle'));
