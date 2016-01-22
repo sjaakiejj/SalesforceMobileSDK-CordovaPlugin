@@ -31,7 +31,7 @@
 
   <dependency id="cordova-plugin-whitelist" />
   <dependency id="cordova-plugin-device" />
-  <dependency id="phonegap-plugin-push" />
+  <dependency id="phonegap-plugin-push" commit="71841e1ae9380a0ef6eff4e149550199680f0d3b"/>
 
   <!-- ios -->
   <platform name="ios">
